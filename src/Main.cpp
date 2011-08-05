@@ -41,7 +41,7 @@ int main(int argc, char ** argv)
    printf("MiniMac - Imputation into phased haplotypes\n"
           "(c) 2011 Goncalo Abecasis\n");
 #ifdef __VERSION__
-   printf("VERSION 4.5\n");
+   printf("VERSION 5.0\n");
 #else
    printf("UNDOCUMENTED RELEASE\n");
 #endif
