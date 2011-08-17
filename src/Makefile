@@ -10,7 +10,7 @@ HDRONLY =
 # Handle openmp
 ifeq ($(MAKECMDGOALS),openmp)
   OBJDIR_OPT = $(OBJDIR)/omp
-  BINDIR_OPT = $(BINDIR)/omp
+  EXE = minimac_omp
 endif
 
 ########################
@@ -22,6 +22,7 @@ include ../Makefile.inc
 # Handle openmp
 openmp: USER_COMPILE_VARS = -fopenmp
 openmp: opt
+	echo $(EXE)
 
 # Also need to build openmp
 all:
