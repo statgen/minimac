@@ -1,5 +1,6 @@
 # Name of the executable
 EXE=minimac
+OMP_EXE=minimac-omp
 ########################
 # The Files:
 TOOLBASE = HaplotypeClipper HaplotypeSet ImputationStatistics MarkovModel MarkovParameters
@@ -10,7 +11,7 @@ HDRONLY =
 # Handle openmp
 ifeq ($(MAKECMDGOALS),openmp)
   OBJDIR_OPT = $(OBJDIR)/omp
-  EXE = minimac_omp
+  EXE = $(OMP_EXE)
 endif
 
 ########################
@@ -29,4 +30,4 @@ all:
 	$(MAKE) --no-print-directory openmp
 ########################
 # Handle openmp
-USER_REMOVES += -rm -rf $(OBJDIR)/omp/*.o $(BINDIR)/omp
+USER_REMOVES += -rm -rf $(OBJDIR)/omp/*.o $(BINDIR)/$(OMP_EXE)
